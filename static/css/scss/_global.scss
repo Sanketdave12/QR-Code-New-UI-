@@ -13,3 +13,19 @@ button{
   cursor: pointer;
 }
 $headColor : hsl(339, 78%, 49%);
+
+.desktop{
+  display: initial;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+
+@media (max-width:576px) {
+  .desktop{
+    display: none;
+  }
+}

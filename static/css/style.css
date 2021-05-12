@@ -14,6 +14,26 @@ button {
   cursor: pointer;
 }
 
+.desktop {
+  display: initial;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .desktop {
+    display: none;
+  }
+}
+
+header {
+  display: none;
+}
+
 @media (max-width: 576px) {
   header {
     display: -webkit-box;
@@ -52,8 +72,15 @@ button {
   }
 }
 
+.container {
+  display: none;
+}
+
 @media (max-width: 576px) {
-  .search {
+  .container {
+    display: initial;
+  }
+  .container .search {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -62,7 +89,7 @@ button {
             justify-content: space-between;
     padding: 10px 15px;
   }
-  .search .input {
+  .container .search .input {
     border: 1px solid black;
     padding: 5px 10px;
     width: 70%;
@@ -76,48 +103,48 @@ button {
     -webkit-column-gap: 1rem;
             column-gap: 1rem;
   }
-  .search .input img {
+  .container .search .input img {
     width: 20px;
   }
-  .search .input input {
+  .container .search .input input {
     outline: none;
     border: none;
     background: transparent;
   }
-  .search .table {
+  .container .search .table {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     position: relative;
   }
-  .search .table img {
+  .container .search .table img {
     width: 34px;
   }
-  .horizontal {
+  .container .horizontal {
     opacity: 0.5;
     margin-bottom: 16px;
   }
-  .carousel1 .owl-stage-outer .owl-stage {
+  .container .carousel1 .owl-stage-outer .owl-stage {
     width: 100%;
   }
-  .carousel1 .owl-stage-outer .owl-stage .owl-item {
+  .container .carousel1 .owl-stage-outer .owl-stage .owl-item {
     width: 100%;
     height: 250px;
   }
-  .carousel1 .owl-stage-outer .owl-stage .owl-item img {
+  .container .carousel1 .owl-stage-outer .owl-stage .owl-item img {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  main .category .catHeading {
+  .container main .category .catHeading {
     margin-bottom: 1rem;
   }
-  main .category .catHeading p.catHead {
+  .container main .category .catHeading p.catHead {
     font-weight: 700;
     font-size: 6vw;
   }
-  main .category .catHeading p::before {
+  .container main .category .catHeading p::before {
     background-color: #000;
     content: "";
     display: inline-block;
@@ -126,7 +153,7 @@ button {
     vertical-align: middle;
     width: 15vw;
   }
-  main .category .cards {
+  .container main .category .cards {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -136,7 +163,7 @@ button {
             flex-direction: column;
     row-gap: 1rem;
   }
-  main .category .cards .catCard {
+  .container main .category .cards .catCard {
     padding: 10px;
     margin: 0 16px;
     display: -webkit-box;
@@ -152,10 +179,10 @@ button {
     -webkit-box-shadow: 1px 1px 10px #c2c2c2, -1px -1px 22px #ffffff;
             box-shadow: 1px 1px 10px #c2c2c2, -1px -1px 22px #ffffff;
   }
-  main .category .cards .catCard .itemPic {
+  .container main .category .cards .catCard .itemPic {
     width: 25%;
   }
-  main .category .cards .catCard .itemPic img {
+  .container main .category .cards .catCard .itemPic img {
     width: 100%;
     border-radius: 10px;
     height: 100%;
@@ -164,7 +191,7 @@ button {
     -o-object-position: center;
        object-position: center;
   }
-  main .category .cards .catCard .itemDisc {
+  .container main .category .cards .catCard .itemDisc {
     width: 50%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -175,15 +202,15 @@ button {
             flex-direction: column;
     row-gap: 0.5rem;
   }
-  main .category .cards .catCard .itemDisc p.itemHead {
+  .container main .category .cards .catCard .itemDisc p.itemHead {
     font-size: 20px;
   }
-  main .category .cards .catCard .itemDisc p#itemDisc {
+  .container main .category .cards .catCard .itemDisc p#itemDisc {
     font-size: 3vw;
     text-align: justify;
     opacity: 0.7;
   }
-  main .category .cards .catCard .itemPrice {
+  .container main .category .cards .catCard .itemPrice {
     width: 25%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -198,7 +225,7 @@ button {
     -ms-flex-line-pack: justify;
         align-content: space-between;
   }
-  main .category .cards .catCard .itemPrice button {
+  .container main .category .cards .catCard .itemPrice button {
     outline: none;
     border: none;
     background: #f4431f;
@@ -210,10 +237,10 @@ button {
     margin-top: 0.5rem;
     cursor: pointer;
   }
-  .checkout-section {
+  .container .checkout-section {
     margin-top: 1rem;
   }
-  .checkout-section .footer_content {
+  .container .checkout-section .footer_content {
     background-color: black;
     color: white;
     height: 80px;
@@ -230,7 +257,7 @@ button {
     margin-left: auto;
     margin-right: auto;
   }
-  .checkout-section .footer_content .foot_left {
+  .container .checkout-section .footer_content .foot_left {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -242,14 +269,14 @@ button {
     border-right: 2px solid wheat;
     padding: 0 0 0 16px;
   }
-  .checkout-section .footer_content .foot_left .total_qty {
+  .container .checkout-section .footer_content .foot_left .total_qty {
     font-size: 4vw;
     letter-spacing: 2px;
   }
-  .checkout-section .footer_content .foot_left .totalrs {
+  .container .checkout-section .footer_content .foot_left .totalrs {
     font-size: 5vw;
   }
-  .checkout-section .footer_content .foot_right {
+  .container .checkout-section .footer_content .foot_right {
     width: 50%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -258,10 +285,10 @@ button {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .checkout-section .footer_content .foot_right .link {
+  .container .checkout-section .footer_content .foot_right .link {
     text-decoration: none;
   }
-  .checkout-section .footer_content .foot_right .link .checkout {
+  .container .checkout-section .footer_content .foot_right .link .checkout {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -272,18 +299,25 @@ button {
             align-items: center;
     cursor: pointer;
   }
-  .checkout-section .footer_content .foot_right .link .checkout p {
+  .container .checkout-section .footer_content .foot_right .link .checkout p {
     font-size: 23px;
     font-weight: 500;
     color: #ffffff;
   }
 }
 
+.container {
+  display: none;
+}
+
 @media (max-width: 576px) {
   body {
     background-color: #f0f0f0;
   }
-  .checkout {
+  .container {
+    display: initial;
+  }
+  .container .checkout {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -292,10 +326,10 @@ button {
             justify-content: center;
     overflow-x: hidden;
   }
-  .checkout p {
+  .container .checkout p {
     font-size: 7vw;
   }
-  .checkout p::before {
+  .container .checkout p::before {
     content: "";
     position: relative;
     display: inline-block;
@@ -305,7 +339,7 @@ button {
     vertical-align: middle;
     right: 10px;
   }
-  .checkout p::after {
+  .container .checkout p::after {
     content: "";
     position: relative;
     display: inline-block;
@@ -315,11 +349,11 @@ button {
     vertical-align: middle;
     left: 10px;
   }
-  main {
+  .container .checkoutMain {
     background: #f0f0f0;
     padding: 0 16px;
   }
-  main .checkoutCards {
+  .container .checkoutMain .checkoutCards {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -329,7 +363,7 @@ button {
             flex-direction: column;
     row-gap: 1rem;
   }
-  main .checkoutCards .catCard {
+  .container .checkoutMain .checkoutCards .checkoutCard {
     position: relative;
     background: white;
     display: -webkit-box;
@@ -345,7 +379,7 @@ button {
     border: 1px solid #d5d3da;
     border-radius: 8px;
   }
-  main .checkoutCards .catCard img {
+  .container .checkoutMain .checkoutCards .checkoutCard img {
     position: absolute;
     top: 0;
     right: 0;
@@ -353,13 +387,13 @@ button {
     height: 20px;
     cursor: pointer;
   }
-  main .checkoutCards .catCard:first-child {
+  .container .checkoutMain .checkoutCards .checkoutCard:first-child {
     margin-top: 1rem;
   }
-  main .checkoutCards .catCard:last-child {
+  .container .checkoutMain .checkoutCards .checkoutCard:last-child {
     margin-bottom: 1rem;
   }
-  main .checkoutCards .checkoutBtn {
+  .container .checkoutMain .checkoutCards .checkoutBtn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -372,7 +406,7 @@ button {
     -webkit-column-gap: 0.8rem;
             column-gap: 0.8rem;
   }
-  main .checkoutCards .checkoutBtn .btnCircle {
+  .container .checkoutMain .checkoutCards .checkoutBtn .btnCircle {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -389,8 +423,8 @@ button {
     border: 1px solid #d5d3da;
     overflow: hidden;
   }
-  main .checkoutCards .checkoutBtn .btnCircle button.minus,
-  main .checkoutCards .checkoutBtn .btnCircle button.plus {
+  .container .checkoutMain .checkoutCards .checkoutBtn .btnCircle button.minus,
+  .container .checkoutMain .checkoutCards .checkoutBtn .btnCircle button.plus {
     background-color: transparent;
     outline: none;
     border: none;
@@ -398,13 +432,13 @@ button {
     width: 20px;
     height: 20px;
   }
-  main .checkoutCards .checkoutBtn span {
+  .container .checkoutMain .checkoutCards .checkoutBtn span {
     font-size: 16px;
   }
-  .horizontal {
+  .container .horizontal {
     margin-bottom: 0;
   }
-  .total {
+  .container .total {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -421,14 +455,14 @@ button {
     padding: 16px 32px;
     row-gap: 0.5rem;
   }
-  .total .subtotal {
+  .container .total .subtotal {
     border-bottom: 1px solid #1a1a1b;
     padding-bottom: 5px;
   }
-  .extranote {
+  .container .extranote {
     padding: 0 32px 16px 16px;
   }
-  .extranote textarea {
+  .container .extranote textarea {
     width: 100%;
     padding: 10px 0 0 10px;
     border: 1px solid #d5d3da;
@@ -437,43 +471,114 @@ button {
     resize: none;
     font-weight: 400;
   }
-  .extranote textarea::-webkit-input-placeholder {
-    padding: 100px;
+  .container .extranote textarea::-webkit-input-placeholder {
+    padding: 10px;
   }
-  .extranote textarea:-ms-input-placeholder {
-    padding: 100px;
+  .container .extranote textarea:-ms-input-placeholder {
+    padding: 10px;
   }
-  .extranote textarea::-ms-input-placeholder {
-    padding: 100px;
+  .container .extranote textarea::-ms-input-placeholder {
+    padding: 10px;
   }
-  .extranote textarea::placeholder {
-    padding: 100px;
+  .container .extranote textarea::placeholder {
+    padding: 10px;
   }
-}
-
-.paymentMethod {
-  padding: 16px;
-}
-
-.paymentMethod .paymentType {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.paymentMethod .paymentType .online-mode {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.paymentMethod .paymentType .online-mode input {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  .container .extranote textarea::-webkit-input-placeholder {
+    color: black;
+  }
+  .container .paymentMethod {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 1rem;
+    padding: 16px;
+  }
+  .container .paymentMethod .paymentType {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 0.5rem;
+  }
+  .container .paymentMethod .paymentType .online {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .paymentMethod .paymentType .online .online-mode input {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .container .paymentMethod .paymentType .online .online-mode-text {
+    margin-left: 1.1rem;
+  }
+  .container .paymentMethod .paymentType .online .online-mode-text p {
+    font-size: 14px;
+    opacity: 0.7;
+  }
+  .container .paymentMethod .paymentType .offline {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .paymentMethod .paymentType .offline .offline-mode input {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .container .paymentMethod .paymentType .offline .offline-mode-text {
+    margin-left: 1.1rem;
+  }
+  .container .paymentMethod .paymentType .offline .offline-mode-text p {
+    font-size: 14px;
+    opacity: 0.7;
+  }
+  .container .proceed-to-pay {
+    width: 100%;
+    background: #000000;
+    padding: 20px 0;
+  }
+  .container .proceed-to-pay a {
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #ffffff;
+    -webkit-column-gap: 0.5rem;
+            column-gap: 0.5rem;
+    text-decoration: none;
+  }
+  .container .proceed-to-pay a .text p {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .container .proceed-to-pay a img {
+    background: #ffffff;
+    padding: 5px;
+    border-radius: 50%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

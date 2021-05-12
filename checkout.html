@@ -5,20 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- Owl-Carousel js link -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
     />
+    <!-- --------------------------- -->
+    <!-- CSS Link -->
     <link rel="stylesheet" href="static/css/style.css" />
     <!-- ------------------ -->
+    <!-- font links -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <!-- JS LINKS -->
+    <!-- ------------------------------- -->
+    <!-- jQuery LINKS -->
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- ------------------------------------- -->
+    <script src="static/js/script.js"></script>
   </head>
+
   <body>
     <!-- HEADER START -->
     <header>
@@ -31,14 +39,20 @@
       </nav>
     </header>
     <!-- HEADER END -->
-
+    
+    <div class="container">
+      
+    <!-- Checkout Heading Start -->
     <div class="checkout">
       <p>CHECKOUT</p>
     </div>
+    <!-- Checkout Heading End -->
 
-    <main>
+    <!-- Main Section Start Here -->
+    <main class="checkoutMain">
+      <!-- Category Cards Section Start -->
       <div class="checkoutCards">
-        <div class="catCard">
+        <div class="checkoutCard">
           <img src="static/Images/Checkout/XCircle.svg" alt="" />
           <div class="itemDisc">
             <p class="itemHead">Margreta Pizza</p>
@@ -57,7 +71,7 @@
             <p class="price">225 Rs.</p>
           </div>
         </div>
-        <div class="catCard">
+        <div class="checkoutCard">
           <img src="static/Images/Checkout/XCircle.svg" alt="" />
           <div class="itemDisc">
             <p class="itemHead">Margreta Pizza</p>
@@ -76,7 +90,7 @@
             <p class="price">225 Rs.</p>
           </div>
         </div>
-        <div class="catCard">
+        <div class="checkoutCard">
           <img src="static/Images/Checkout/XCircle.svg" alt="" />
           <div class="itemDisc">
             <p class="itemHead">Margreta Pizza</p>
@@ -95,7 +109,7 @@
             <p class="price">225 Rs.</p>
           </div>
         </div>
-        <div class="catCard">
+        <div class="checkoutCard">
           <img src="static/Images/Checkout/XCircle.svg" alt="" />
           <div class="itemDisc">
             <p class="itemHead">Margreta Pizza</p>
@@ -114,7 +128,7 @@
             <p class="price">225 Rs.</p>
           </div>
         </div>
-        <div class="catCard">
+        <div class="checkoutCard">
           <img src="static/Images/Checkout/XCircle.svg" alt="" />
           <div class="itemDisc">
             <p class="itemHead">Margreta Pizza</p>
@@ -134,8 +148,13 @@
           </div>
         </div>
       </div>
+      <!-- Category Cards Section End -->
     </main>
+    <!-- Main Section End Here -->
+
     <hr class="horizontal" />
+
+    <!-- Total Amount Start -->
     <div class="total">
       <div class="subtotal">
         <p>Subtotal <span>1125 Rs</span></p>
@@ -144,6 +163,9 @@
         <p>Total <span> 1150 Rs</span></p>
       </div>
     </div>
+    <!-- Total Amount End -->
+
+    <!-- Extra Notes Start -->
     <div class="extranote">
       <textarea
         name=""
@@ -152,26 +174,51 @@
         placeholder="Add Cooking Instructions..(Optional)"
       ></textarea>
     </div>
+    <!-- Extra Notes End -->
+
     <hr class="horizontal" />
 
+    <!-- Select Payment Method Start-->
     <div class="paymentMethod">
       <div class="paymentHead">
         <p>Payment Method</p>
       </div>
       <div class="paymentType">
-        <div class="online-mode">
-          <input type="radio" name="method" id="" /> <span>Online</span>
+        <div class="online">
+          <div class="online-mode">
+            <input type="radio" name="method" id="" /> <span>Online</span>
+          </div>
+          <div class="online-mode-text">
+            <p>Google Pay aayu bapa have to...</p>
+          </div>
         </div>
-        <div class="online-mode-text">
-          <p>Google Pay aayu bapa have to...</p>
-        </div>
-        <div class="offline-mode">
-          <input type="radio" name="method" id="" /> Offline
-        </div>
-        <div class="offline-mode-text">
-          <p>char hudhi offline vaparso...</p>
+        <div class="offline">
+          <div class="offline-mode">
+            <input type="radio" name="method" id="" /> Offline
+          </div>
+          <div class="offline-mode-text">
+            <p>Char hudhi offline vaparso...</p>
+          </div>
         </div>
       </div>
+    </div>
+    <!-- Select Payment Method End -->
+
+    <!-- Proceed to Pay Section Start -->
+    <div class="proceed-to-pay">
+      <!-- <div class="proceed-btn"> -->
+      <a href="">
+        <div class="text">
+          <p>PROCEED TO PAY</p>
+        </div>
+        <img src="./static/Images/Checkout/Forward.svg" alt="" />
+      </a>
+      <!-- </div> -->
+    </div>
+    <!-- Proceed to Pay Section End -->
+    </div>
+    <div class="desktop">
+       <h1> This webpage is mobile Friendly,Kindly open it in mobile</h1>
     </div>
   </body>
 </html>
